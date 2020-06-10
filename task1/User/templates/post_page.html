@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="{% static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+		
+		<!-- STYLE CSS -->
+		<link rel="stylesheet" href="{% static 'css/main1.css' %}">
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+			<div class="inner">
+				<form action="{% url 'post_submit' %}" method="POST">
+					{% csrf_token %}
+					<h3>Post Form</h3>
+
+					<label class="form-group">
+						<input readonly placeholder="{{username}}" class="form-control">
+						<span class="border"></span>
+					</label>
+					<label class="form-group">
+						<input type="text" class="form-control" name="text" required>
+						<span for="">Text</span>
+						<span class="border"></span>
+					</label>
+
+					<button>Submit 
+						<i class="zmdi zmdi-arrow-right"></i>
+					</button>
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html lang="zxx">
+
+<head>
+	<title>Registration Form</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Travel Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements"
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
+
+	<!-- css files -->
+	<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<!-- //css files -->
+
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	    rel="stylesheet">
+	<!-- //web-fonts -->
+</head>
+
+<body
+style="background:url({%static 'image/everest-7.jpg'%});background-size:cover">
+	<!-- title -->
+	<h1>
+        <span>R</span>egisteration
+		<span>F</span>orm</h1>
+	<!-- //title -->
+
+	<!-- content -->
+	<div class="sub-main-w3">
+		<form action="{% url 'login' %}" method="post">
+			{% csrf_token %}
+			<img src="images/logo.png" alt="">
+			<h2>Create Your Account</h2>
+			<div class="form-style-agile">
+				<input placeholder="FirstName" name="fname" type="text" required="">
+			</div>
+			<div class="form-style-agile">
+				<input placeholder="LastName" name="lname" type="text" required="">
+			</div>
+			<div class="form-style-agile">
+				<input placeholder="Email-ID" name="email" type="text" required="">
+			</div>
+			<div class="form-style-agile">
+				<input placeholder="Username" name="Name" type="text" required="">
+			</div>
+			<div class="form-style-agile">
+				<input placeholder="Password" name="Password" type="password" required="">
+			</div>
+			<!-- checkbox -->
+			<div class="wthree-text">
+				<ul>
+					<li>
+						<!-- switch -->
+						<div class="checkout-w3l">
+							<div class="demo5">
+								<div class="switch demo3">
+									<input type="checkbox">
+									<label>
+										<i></i>
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- //checkout -->
+					</li>
+					<li>
+						<button type="submit">Submit</button>
+					</li>
+				</ul>
+			</div>
+			<!-- //switch -->
+		</form>
+	</div>
+	<div class="clear"></div>
+	<!-- //content -->
+
+
+
+</>
+
+</html>
